@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/register.css" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="w1000">
+				<div class="head_title fl">
+					<a href="javascript:;" target="_blank">博客园</a>
+				</div>
+				<div class="fr login">
+					<a href="javascript:;" target="_blank">登录</a>
+				</div>
+			</div>
+		</div>
+		<div class="w1000 clearfix p_relative">
+			<div>
+				<div class="form_area">
+					<h2 class="title pd_10">注册博客园</h2>
+					<ul class="tab">
+						<li class="current" id="js-reg-tab-1">邮箱注册</li>
+						<li id="js-reg-tab-2">手机注册</li>
+					</ul>
+					<div class="box">
+						<div class="bd form_list">
+							<div class="tabcont" id="js-reg-tab-con-1" style="display: block;">
+								<div class="item indexput clearfix">
+									<label class="txt_label">电子邮箱</label>
+									<span class="input_wrap">
+										<input type="text" id="js-email" class="js-email txt_input txt_270"/>
+									</span>
+									<ul id="js-email-list" class="mail_tips" style="display: none;">
+										<li>
+											<span>请选择邮箱类型</span>
+										</li>
+									</ul>
+									<div id="js-email-tips" class="txt_tips" style="display: block;">请输入您常用的邮箱</div>
+									<div id="js-email-error" class="txt_tips txt_tips_error" style="display: none;"></div>
+									<div id="js-email-ok" class="txt_tips txt_tips_ok" style="display: none;"></div>
+								</div>
+								<div class="item clearfix">
+									<label class="txt_label">密码</label>
+									<span class="input_wrap">
+										<input type="password" id="js-email-password" class="txt_input txt_270"/>
+									</span>
+									<div id="js-email-tips-2" class="txt_tips txt_tips_double" style="display: block;">
+										6-20位字符，不能使用空格、<br>注册账号
+									</div>
+									<div id="js-email-password-tips-2" class="txt_tips txt_tips_double gray" style="display: none;"></div>
+									<div id="js-email-password-error" class="txt_tips txt_tips_error" style="display: none;"></div>
+									<div class="txt_tips txt_tips_ok" style="display: none;"></div>
+								</div>
+								<div class="item clearfix">
+									<label class="txt_label">确认密码</label>
+									<span class="input_wrap">
+										<input type="password" id="js_email-password-confirm" class="txt_input txt_270"/>
+									</span>
+									<div id="js-email-confirm-tips-1" class="txt_tips" style="display: none;">前后密码不一致</div>
+									<div id="js-email-confirm-tips-2" class="txt_tips txt_tips_error" style="display: none;"></div>
+									<div id="js-email-confirm-tips-3" class="txt_tips txt_tips_ok" style="display: none;"></div>
+								</div>
+								<div class="item clearfix code">
+									<label class="txt_label">验证码</label>
+									<span class="input_wrap">
+										<input type="text" id="js-email-reg-code" class="txt_input txt_124" />
+									</span>
+									<img src="img/authcode0.jpg" width="62" height="30" class="code_img" alt="" id="js-email-reg-code-pic" />
+									<a href="javascript:void(0);" id="js-email-reg-code-refresh" class="code_change">换一个</a>
+									<div id="email-code-tips" class="txt_tips">请输入验证码</div>
+									<div id="email-code-error" class="txt_tips txt_tips_error" style="display: none;"></div>
+									<div id="email-code-ok" class="txt_tips txt_tips_ok" style="display: none;"></div>
+								</div>
+								<div class="item clearfix pt_10 mb_0">
+									<input type="checkbox" class="txt_check" checked="true" id="js-email-check"/>
+									<label for="js-email-check" class="txt_check_label gray">
+										我已阅读并同意<a href="javascript:void(0);" target="_blank">《博客园使用协议》</a>
+									</label>
+									
+								</div>
+								<div class="item clearfix btm_area">
+									<input type="button" id="js-email-reg-submit" class="btn btn01" value="提交注册"/>
+								</div>
+								<div id="js-email-warn" class="warn-text"></div>
+							</div>
+							<div class="tabcont" id="js-reg-tab-con-2" style="display: none;">
+								<div class="item clearfix code">
+									<label class="txt_label" style="width: 70px;">图片验证码</label>
+									<span class="input_wrap">
+										<input type="text" id="js-mobile-pic-reg-code" value="" name class="txt_input txt_124"/>
+									</span>
+									<img id="js-mobile-reg-code-pic" src="img/authcode1.jpg" width="62" height="30" class="code_img"/>
+									<a href="javascript:;" id="js-mobile-pic-code-refresh" class="code_change">换一个</a>
+									<div id="mobile-pic-code-tips" class="txt_tips">请输入图片验证码</div>
+									<div id="mobile-pic-code-error" class="txt_tips txt_tips_error" style="display: none;"></div>
+									<div id="mobile-pic-code-ok" class="txt_tips txt_tips_ok" style="display: none;"></div>
+								</div>
+								<div class="item clearfix">
+									<label class="txt_label" style="width: 70px;">手机号</label>
+									<span class="input_wrap">
+										<input type="text" id="js-mobile-number" name class="txt_input txt_270"/>
+									</span>
+									<div id="js-mobile-tips" class="txt_tips" style="display: block;">请输入您的手机号</div>
+									<div id="js-mobile-error" class="txt_tips txt_tips_error" style="display: none;"></div>
+									<div id="js-mobile-ok" class="txt_tips txt_tips_ok" style="display: none;"></div>
+								</div>
+								<div class="item clearfix">
+									<span id="js-mobile-reg-code-refresh" class="btn btn02 btn02_disable" href="javascript:;" style="margin-left: 86px;">获取验证码</span>
+									<span id="js-moblie-reg-count" class="btn btn02 btn02_disable" style="display: none; margin-left: 86px;">60秒后重新获取</span>
+									<span class="red ml_10" id="js-mobile-code-wran">24小时之内只能发送3次验证码</span>
+									<span id="js-mobile-success" class="ml_10" style="display: none;">验证码已发送</span>
+								</div>
+								<div class="item clearfix">
+									<label class="txt_label" style="width: 70px;">短信验证码</label>
+									<span class="input_wrap">
+										<input type="text" id="js-mobile-reg-code"/ name class="txt_input txt_270"">
+									</span>
+									<div id="mobile-code-tips" class="txt_tips" style="display: block;">请输入6位验证码</div>
+									<div id="mobile-code-error" class="txt_tips txt_tips_error" style="display: none;"></div>
+									<div id="mobile-code-ok" class="txt_tips txt_tips_ok" style="display: none;"></div>
+								</div>
+								<div class="item clearfix">
+									<label class="txt_label" style="width: 70px;">密码</label>
+									<span class="input_wrap">
+										<input id="js-mobile-password" type="password" class="txt_input txt_270"/>
+									</span>
+									<div id="js-mobile-password-tips-1" class="txt_tips txt_tips_double" style="display: block;">6-20位字符，不能使用空格、<br>注册帐号</div>
+									<div id="js-mobile-password-tips-2" class="txt_tips txt_tips_double gray" style="display: none;"></div>
+									<div id="js-mobile-password-error" class="txt_tips txt_tips_error" style="display: none;"></div>
+									<div class="txt_tips txt_tips_ok" style="display: none;"></div>
+								</div>
+								<div class="item clearfix">
+									<label class="txt_label" style="width: 70px;">确认密码</label>
+									<span class="input_wrap">
+										<input id="js-mobile-password-confirm" type="password" class="txt_input txt_270"/>
+									</span>
+									<div id="js-mobile-confirm-tips-1" class="txt_tips" style="display: none;">前后密码不一致</div>
+									<div id="js-mobile-confirm-tips-2" class="txt_tips txt_tips_error" style="display: none;"></div>
+									<div id="js-mobile-confirm-tips-3" class="txt_tips txt_tips_ok" style="display: none;"></div>
+								</div>
+								<div class="item clearfix pt_10 mb_0">
+									<input type="checkbox" checked="true" id="js-mobile-check" class="txt_check" style="margin-left: 86px;" value/>
+									<label for="js-mobile-check" class="txt_check_label gray">
+										我已阅读并同意<a href="javascript:;" target="_blank">《博客园使用协议》</a>
+									</label>
+								</div>
+								<div class="item clearfix btn_area">
+									<input type="button" id="js-mobile-reg-submit" name class="btn btn01" value="提交注册"/>
+								</div>
+								<div id="js-mobile-warn" class="warn_text"></div>
+							</div>
+							<input type="hidden" value id="js-cb"/>
+						</div>
+						<div class="bot"></div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="footer">
+			<span>© 2016 SuperJ20 && Powered by hexo</span>
+		</div>
+		
+		<script src="js/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/strategies.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/register.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				console.log('64516');
+				useregister();
+			});
+		</script>
+	</body>
+</html>
